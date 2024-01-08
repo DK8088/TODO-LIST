@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family:"poppins";
+  font-weight: 300;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body{
   background-color: #282c34;
-  min-height: 100vh;
+  color:white;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+  user-select: none;
+
+}
+
+
+/*************************************     header      **********************************************/
+
+
+header{
+  max-width:100vw;
+  padding: 0.8rem;
+  display:flex;
+  justify-content: space-between;
+
+  background-color:#2D4356;
+}
+
+h1{
+  font-size: 1.5rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#m-btn{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0.3rem;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-btn{
+
+width: 1.7rem;
+height: 0.4rem;
+margin: 0.05rem;
+
+background-color:white;
+border: none;
+border-radius: 0.4rem;
+}
+
+
+
+/************************************      main     *************************************/
+
+main{
+  width: 100vw;
+  height:80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color:#282c34;
+
+  position: relative;
+}
+
+main button{
+  margin: 1rem;
+}
+/*************************************   add-element ************************************/
+
+
+#input-area{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin:1rem;
+  
+  position: relative;
+
+}
+
+#input{
+  width: 90vw;
+  min-height: 2.4rem;
+
+  border-radius: 1rem;
+  border: none;
+  padding: 0.6rem;
+
+  font-size: 1rem;
+
+
+}
+
+#add-btn{
+position: absolute;
+left:76%;
+
+
+
+width:3.8rem;
+
+padding: 0.4rem ;
+border-radius:1rem;
+border:none;
+
+background-color:#2D4356;
+color:white;
+font-size: 1.2rem;
+
+cursor: pointer;
+}
+
+
+
+
+
+/*************************************   content    *************************************/
+
+.content{
+  width:90vw;
+  min-height:50vh;
+  background-color: white;
+
+  border-radius:1.5rem;
+}
+
+/************************************  task list   **************************************/
+
+main ul li{
+  color: black;
+
+  list-style:decimal;
+
+  margin-left:2rem;
+  margin-top: 1rem;
+
+  position: relative;
+  cursor: pointer;
+  
+}
+
+main ul li span{
+  width: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+
+  background-color: #2D4356;
+  color: white;
+
+  position: absolute;
+  right:1rem;
+  
+  cursor: pointer;
+}
+
+.strike{
+  text-decoration: line-through;
+}
+
+/***************************************     menu      **********************************/
+.menu-box{
+  display:none;
+  width:10rem;
+  min-height:5rem;
+  border-radius: 1rem;
+  background-color:#2D4356;
+  color:white;
+}
+
+.menu-box ol li{
+  list-style:none;
+  margin:1rem;
+  text-align: center;
+
+  background-color: white;
+  border-radius: 0.5rem;
+  color: #282c34;
+}
+
+.menu-box ol li a{
+  color: #282c34;
+  text-decoration: none;
+}
+
+.menu-box{
+  z-index: 1;
+  position:absolute;
+  right: 0.1rem;
+  top: 2.7rem;
 }
